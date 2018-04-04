@@ -1,16 +1,10 @@
-import { Component } from "@angular/core";
-import { Subject } from "rxjs/Subject";
+import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
-  selector: "app-root"
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent { 
-
-  public onDestroy: Subject<void> = new Subject<void>();
-
-  ngOnDestroy() {
-    this.onDestroy.next();	
-  }
+export class AppComponent {
+  title = 'app';
 }
